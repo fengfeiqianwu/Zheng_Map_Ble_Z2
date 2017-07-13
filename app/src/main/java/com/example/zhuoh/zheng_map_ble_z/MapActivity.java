@@ -1205,7 +1205,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                         data.time = tempdata.get("strtime").toString();
                         data.cellMode = tempdata.get("cellMode").toString();
                         data.channel = tempdata.get("strchannel").toString();
-                        //data.rxlevel = tempdata.get("strrxlevel").toString();
+                        data.rxlevel = tempdata.get("strrxlevel").toString();
                         userDao = new UserDao(this);
                         userDao.insertData(data);
                         //s.add(data);
