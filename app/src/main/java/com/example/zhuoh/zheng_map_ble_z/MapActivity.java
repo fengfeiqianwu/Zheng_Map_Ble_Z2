@@ -1209,7 +1209,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                         userDao = new UserDao(this);
                         userDao.insertData(data);
                         //s.add(data);
-                        tempdata.clear();
+                        //tempdata.clear();
                         is_loc_data = false;
                     }
 
