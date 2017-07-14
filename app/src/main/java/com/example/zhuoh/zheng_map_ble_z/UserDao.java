@@ -1,9 +1,11 @@
 package com.example.zhuoh.zheng_map_ble_z;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -109,5 +111,23 @@ public class UserDao {
         c.close();
         db.close();
         return pages;
+    }
+    public List<Map<String,String>> getDatabymlc(String mode,String lac,String cid){
+        SQLiteDatabase db = helper.getReadableDatabase();
+        Cursor c = db.rawQuery("select id,lat,lng,rxlevel from queryinfo where cellMode=? and lac=? and cid=?",new String[]{mode,lac,cid});
+        List<Map<String, String>> list = new ArrayList<Map<String, String>>();
+        while (c.moveToNext()){
+            Map<String,String> map = new HashMap<String, String>();
+            map.put("id", c.getString(c.getColumnIndex("id")));
+            map.put("lat", c.getString(c.getColumnIndex("lat")));
+            map.put("lng", c.getString(c.getColumnIndex("lng")));
+            map.put("rxlevel", c.getString(c.getColumnIndex("rxlevel")));
+            list.add(map);
+        }
+        return list;
+    }
+    public void alterDatabyidmlc(String rxlevel,String id ,String cellMode,String lac,String cid){
+        SQLiteDatabase db = helper.getReadableDatabase();
+        db.execSQL("update queryinfo set rxlevel =? where id = ? and cellMode = ? and lac = ? and cid = ?",new Object[]{rxlevel,id,cellMode,lac,cid});
     }
 }

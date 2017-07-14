@@ -37,6 +37,7 @@ import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.amap.api.maps.AMap;
+import com.amap.api.maps.AMapUtils;
 import com.amap.api.maps.CameraUpdateFactory;
 import com.amap.api.maps.LocationSource;
 import com.amap.api.maps.MapView;
@@ -50,6 +51,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Queue;
 
 import static com.example.zhuoh.zheng_map_ble_z.ConstantData.TOAST;
@@ -1207,7 +1209,24 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                         data.channel = tempdata.get("strchannel").toString();
                         data.rxlevel = tempdata.get("strrxlevel").toString();
                         userDao = new UserDao(this);
-                        userDao.insertData(data);
+                        List<Map<String,String>> list = new ArrayList<Map<String,String>>();
+                        list = userDao.getDatabymlc(data.cellMode,data.lac,data.cid);
+                        int i,c=0;
+                        for(i = 0;i<list.size();i++){
+                            Map<String,String>map = new HashMap<>();
+                            map = list.get(i);
+                            float distance = AMapUtils.calculateLineDistance(new LatLng(Double.valueOf(data.lat),Double.valueOf(data.lng)),new LatLng(Double.valueOf(map.get("lat")),Double.valueOf(map.get("lng"))));
+                            if(distance<=10){
+                                if(Double.valueOf(map.get("rxlevel"))<Double.valueOf(data.rxlevel)){
+                                    userDao.alterDatabyidmlc(data.rxlevel,map.get("id"),data.cellMode,data.lac,data.cid);
+                                }
+                            }else{
+                                c++;
+                            }
+                        }
+                        if(c == list.size()){
+                            userDao.insertData(data);
+                        }
                         //s.add(data);
                         tempdata.clear();
                         is_loc_data = false;
