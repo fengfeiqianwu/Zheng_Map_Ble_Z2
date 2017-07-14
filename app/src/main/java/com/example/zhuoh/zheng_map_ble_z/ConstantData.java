@@ -20,6 +20,8 @@ public class ConstantData {
     public static int FREQ_TDD;
     public static int PCI_TDD;
     public static int web = 1;
+    public static int twice = 0;
+    public static int third = 0;
     //public static final int WEB_GSM   = 0;
     public static final int WEB_TD_SCDMA = 1;
     public static final int WEB_WCDMA = 2;

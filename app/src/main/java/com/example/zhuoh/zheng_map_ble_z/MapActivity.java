@@ -106,6 +106,23 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
     public static TextView lattime_content;
     public static TextView nid_content;
     public static TextView bid_content;
+    public static TextView tv_21;
+    public static TextView tv_22;
+    public static TextView tv_23;
+    public static TextView tv_24;
+    public static TextView tv_25;
+    public static TextView tv_31;
+    public static TextView tv_32;
+    public static TextView tv_33;
+    public static TextView tv_34;
+    public static TextView tv_35;
+    public static TextView tv_41;
+    public static TextView tv_42;
+    public static TextView tv_43;
+    public static TextView tv_44;
+    public static TextView tv_45;
+
+
     /*邻区*/
     public static TextView latttt_content;
     public static TextView first_content;
@@ -197,6 +214,22 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
         lattime_content = (TextView)findViewById(R.id.lattime_content);
         nid_content = (TextView)findViewById(R.id.nid_content);
         bid_content = (TextView)findViewById(R.id.bid_content);
+        tv_21 = (TextView)findViewById(R.id.tv_21);
+        tv_22 = (TextView)findViewById(R.id.tv_22);
+        tv_23 = (TextView)findViewById(R.id.tv_23);
+        tv_24 = (TextView)findViewById(R.id.tv_24);
+        tv_25 = (TextView)findViewById(R.id.tv_25);
+        tv_31 = (TextView)findViewById(R.id.tv_31);
+        tv_32 = (TextView)findViewById(R.id.tv_32);
+        tv_33 = (TextView)findViewById(R.id.tv_33);
+        tv_34 = (TextView)findViewById(R.id.tv_34);
+        tv_35 = (TextView)findViewById(R.id.tv_35);
+        tv_41 = (TextView)findViewById(R.id.tv_41);
+        tv_42 = (TextView)findViewById(R.id.tv_42);
+        tv_43 = (TextView)findViewById(R.id.tv_43);
+        tv_44 = (TextView)findViewById(R.id.tv_44);
+        tv_45 = (TextView)findViewById(R.id.tv_45);
+
         /*邻区*/
         latttt_content = (TextView)findViewById(R.id.latttt_content);
         first_content = (TextView)findViewById(R.id.first_content);
@@ -635,7 +668,6 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     }
 
                 } catch (InterruptedException e) {
-                    // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
             }

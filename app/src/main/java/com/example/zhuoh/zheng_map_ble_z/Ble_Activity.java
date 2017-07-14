@@ -19,10 +19,11 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
-import java.util.Queue;
+
+import static com.example.zhuoh.zheng_map_ble_z.ConstantData.third;
+import static com.example.zhuoh.zheng_map_ble_z.ConstantData.twice;
+import static com.example.zhuoh.zheng_map_ble_z.ConstantData.web;
 
 public class Ble_Activity extends Activity implements View.OnClickListener{
 
@@ -32,7 +33,6 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
     public static Button btn_bl_connect;
     public static Button btn_bl_disconnect;
     public static TextView tv_con_state;
-    public static Queue<String> blequeue = new LinkedList<String>();
     private String mConnectedDeviceName = null;
     private String mConnectedDeviceAdd = null;
     // 当地的蓝牙适配器
@@ -82,7 +82,7 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
                     if(MapActivity.is_Pause_Continue){
                         String data = msg.getData().getString("SUCCESS");
                         //blequeue.offer(data);
-                        SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss ");
+                        SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss");
                         Date curDate = new Date(System.currentTimeMillis());//获取当前时间
                         String strtime = formatter.format(curDate);
                         if(MapActivity.is_Neizone){
@@ -121,9 +121,122 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
                                 }
                             }
                         }else{
+                            data = data.substring(data.indexOf(":")+1,data.length()-2);
+                            String a[]= data.split(",");
+                            switch (web){
+                                /*data = data.substring(data.indexOf(":")+1,data.length()-2);
+                                String a[]= data.split(",");
+                                Boolean mgsm = a[0].equals("0")&&a[2].equals("00");//移动2g
+                                Boolean ugsm = a[0].equals("0")&&a[2].equals("00");//联通2g
+                                Boolean mtd = a[0].equals("1");//移动3g
+                                Boolean mwcd = a[0].equals("2");//联通3g
+                                Boolean mlte = a[0].equals("3")&&a[2].equals("00");//移动4g
+                                Boolean ulte = a[0].equals("3")&&a[2].equals("01");//联通4g
+                                Boolean clte = a[0].equals("3")&&a[2].equals("11");//电信4g*/
+                                case 1:
+                                    if(twice%3==0){
+                                        MapActivity.tv_21.setText("移动4g");
+                                        MapActivity.tv_22.setText(a[3]);
+                                        MapActivity.tv_23.setText(a[4]);
+                                        MapActivity.tv_25.setText(strtime);
+                                        twice++;
+                                    }else if(twice%3==1){
+                                        MapActivity.tv_31.setText("联通4g");
+                                        MapActivity.tv_32.setText(a[3]);
+                                        MapActivity.tv_33.setText(a[4]);
+                                        MapActivity.tv_35.setText(strtime);
+                                        twice++;
+                                    }else if(twice%3==2){
+                                        MapActivity.tv_41.setText("电信4g");
+                                        MapActivity.tv_42.setText(a[3]);
+                                        MapActivity.tv_43.setText(a[4]);
+                                        MapActivity.tv_45.setText(strtime);
+                                        twice++;
+                                    }
+                                    break;
+                                case 2:
+                                    if(twice%3==0){
+                                        MapActivity.tv_21.setText("移动2g");
+                                        MapActivity.tv_22.setText(a[3]);
+                                        MapActivity.tv_23.setText(a[4]);
+                                        MapActivity.tv_25.setText(strtime);
+                                        twice++;
+                                    }else if(twice%3==1){
+                                        MapActivity.tv_31.setText("联通2g");
+                                        MapActivity.tv_32.setText(a[3]);
+                                        MapActivity.tv_33.setText(a[4]);
+                                        MapActivity.tv_35.setText(strtime);
+                                        twice++;
+                                    }else if(twice%3==2){
+                                        MapActivity.tv_41.setText("电信2g");
+                                        MapActivity.tv_42.setText(a[0]);
+                                        MapActivity.tv_43.setText(a[1]);
+                                        MapActivity.tv_44.setText(a[2]);
+                                        MapActivity.tv_45.setText(strtime);
+                                        twice++;
+                                    }
+                                    break;
+                                case 3:
+                                    if(twice%3==0){
+                                        MapActivity.tv_21.setText("移动4g");
+                                        MapActivity.tv_22.setText(a[3]);
+                                        MapActivity.tv_23.setText(a[4]);
+                                        MapActivity.tv_25.setText(strtime);
+                                        twice++;
+                                    }else if(twice%3==1){
+                                        MapActivity.tv_31.setText("移动3g");
+                                        MapActivity.tv_32.setText(a[3]);
+                                        MapActivity.tv_33.setText(a[4]);
+                                        MapActivity.tv_35.setText(strtime);
+                                        twice++;
+                                    }else if(twice%3==2){
+                                        MapActivity.tv_41.setText("移动2g");
+                                        MapActivity.tv_42.setText(a[3]);
+                                        MapActivity.tv_43.setText(a[4]);
+                                        MapActivity.tv_45.setText(strtime);
+                                        twice++;
+                                    }
+                                    break;
+                                case 4:
+                                    if(twice%3==0){
+                                        MapActivity.tv_21.setText("联通4g");
+                                        MapActivity.tv_22.setText(a[3]);
+                                        MapActivity.tv_23.setText(a[4]);
+                                        MapActivity.tv_25.setText(strtime);
+                                        twice++;
+                                    }else if(twice%3==1){
+                                        MapActivity.tv_31.setText("联通3g");
+                                        MapActivity.tv_32.setText(a[3]);
+                                        MapActivity.tv_33.setText(a[4]);
+                                        MapActivity.tv_35.setText(strtime);
+                                        twice++;
+                                    }else if(twice%3==2){
+                                        MapActivity.tv_41.setText("联通2g");
+                                        MapActivity.tv_42.setText(a[3]);
+                                        MapActivity.tv_43.setText(a[4]);
+                                        MapActivity.tv_45.setText(strtime);
+                                        twice++;
+                                    }
+                                    break;
+                                case 5:
+                                    if(third%2==0){
+                                        MapActivity.tv_21.setText("电信4g");
+                                        MapActivity.tv_22.setText(a[3]);
+                                        MapActivity.tv_23.setText(a[4]);
+                                        MapActivity.tv_25.setText(strtime);
+                                        third++;
+                                    }else if(third%2==1){
+                                        MapActivity.tv_31.setText("电信2g");
+                                        MapActivity.tv_32.setText(a[0]);
+                                        MapActivity.tv_33.setText(a[1]);
+                                        MapActivity.tv_34.setText(a[2]);
+                                        MapActivity.tv_35.setText(strtime);
+                                        third++;
+                                    break;
+                            }
                             if(data.startsWith("AT+SCELLINFO+SCELLINFO")){
                                 data = data.substring(data.indexOf(":")+1,data.length()-2);
-                                String a[]= data.split(",");
+                                //String a[]= data.split(",");
                                 MapActivity.lattime_content.setText(strtime);
                                 MapActivity.mcc_content.setText(a[1]);
                                 MapActivity.mnc_content.setText(a[2]);
@@ -164,7 +277,7 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
                                 }
                             }else if(data.startsWith("AT+BSINFO+BSINFO")){
                                 data = data.substring(data.indexOf(":")+1,data.length()-2);
-                                String a[]= data.split(",");
+                                //String a[]= data.split(",");
                                 MapActivity.lattime_content.setText(strtime);
                                 MapActivity.sid_content.setText(a[0]);
                                 MapActivity.nid_content.setText(a[1]);
@@ -196,7 +309,7 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
                     break;
             }
         }
-    };
+    }};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
