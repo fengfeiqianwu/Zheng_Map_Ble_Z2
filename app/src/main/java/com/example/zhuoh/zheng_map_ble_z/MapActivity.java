@@ -1487,6 +1487,11 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     is_Start = false;
                     drawMap = false;
                     stop();
+                    twice = 0;
+                    third = 0;
+                    firstshow.clear();
+                    secondshow.clear();
+                    cleartv();
                     LTE_COUNT = -1;
                     GSM_COUNT = 0;
                     MOBILE_COUNT = 0;

@@ -83,7 +83,7 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
                     Toast.makeText(getApplicationContext(), msg.getData().getString(ConstantData.TOAST), Toast.LENGTH_SHORT).show();
                     break;
                 case ConstantData.MESSAGE_SUCCESS:
-                    if(MapActivity.is_Pause_Continue){
+
                         String data = msg.getData().getString("SUCCESS");
                         //blequeue.offer(data);
                         SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss");
@@ -139,155 +139,187 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
                                 Boolean clte = a[0].equals("3")&&a[2].equals("11");//电信4g*/
                                 case 1:
                                     if(twice%3==0){
-                                        MapActivity.tv_21.setText("移动4g");
-                                        MapActivity.tv_22.setText(a[3]);
-                                        MapActivity.tv_23.setText(a[4]);
-                                        MapActivity.tv_25.setText(strtime);
+                                        if(MapActivity.is_Pause_Continue){
+                                            MapActivity.tv_21.setText("移动4g");
+                                            MapActivity.tv_22.setText(a[3]);
+                                            MapActivity.tv_23.setText(a[4]);
+                                            MapActivity.tv_25.setText(strtime);
+                                        }
                                         twice++;
                                     }else if(twice%3==1){
-                                        MapActivity.tv_31.setText("联通4g");
-                                        MapActivity.tv_32.setText(a[3]);
-                                        MapActivity.tv_33.setText(a[4]);
-                                        MapActivity.tv_35.setText(strtime);
+                                        if(MapActivity.is_Pause_Continue){
+                                            MapActivity.tv_31.setText("联通4g");
+                                            MapActivity.tv_32.setText(a[3]);
+                                            MapActivity.tv_33.setText(a[4]);
+                                            MapActivity.tv_35.setText(strtime);
+                                        }
                                         twice++;
                                     }else if(twice%3==2){
-                                        MapActivity.tv_41.setText("电信4g");
-                                        MapActivity.tv_42.setText(a[3]);
-                                        MapActivity.tv_43.setText(a[4]);
-                                        MapActivity.tv_45.setText(strtime);
+                                        if(MapActivity.is_Pause_Continue){
+                                            MapActivity.tv_41.setText("电信4g");
+                                            MapActivity.tv_42.setText(a[3]);
+                                            MapActivity.tv_43.setText(a[4]);
+                                            MapActivity.tv_45.setText(strtime);
+                                        }
                                         twice++;
                                     }
                                     break;
                                 case 2:
                                     if(twice%3==0){
-                                        MapActivity.tv_21.setText("移动2g");
-                                        MapActivity.tv_22.setText(a[3]);
-                                        MapActivity.tv_23.setText(a[4]);
-                                        MapActivity.tv_25.setText(strtime);
+                                        if(MapActivity.is_Pause_Continue){
+                                            MapActivity.tv_21.setText("移动2g");
+                                            MapActivity.tv_22.setText(a[3]);
+                                            MapActivity.tv_23.setText(a[4]);
+                                            MapActivity.tv_25.setText(strtime);
+                                        }
                                         twice++;
                                     }else if(twice%3==1){
-                                        MapActivity.tv_31.setText("联通2g");
-                                        MapActivity.tv_32.setText(a[3]);
-                                        MapActivity.tv_33.setText(a[4]);
-                                        MapActivity.tv_35.setText(strtime);
+                                        if(MapActivity.is_Pause_Continue){
+                                            MapActivity.tv_31.setText("联通2g");
+                                            MapActivity.tv_32.setText(a[3]);
+                                            MapActivity.tv_33.setText(a[4]);
+                                            MapActivity.tv_35.setText(strtime);
+                                        }
                                         twice++;
                                     }else if(twice%3==2){
-                                        MapActivity.tv_41.setText("电信2g");
-                                        MapActivity.tv_42.setText(a[0]);
-                                        MapActivity.tv_43.setText(a[1]);
-                                        MapActivity.tv_44.setText(a[2]);
-                                        MapActivity.tv_45.setText(strtime);
+                                        if(MapActivity.is_Pause_Continue){
+                                            MapActivity.tv_41.setText("电信2g");
+                                            MapActivity.tv_42.setText(a[0]);
+                                            MapActivity.tv_43.setText(a[1]);
+                                            MapActivity.tv_44.setText(a[2]);
+                                            MapActivity.tv_45.setText(strtime);
+                                        }
                                         twice++;
                                     }
                                     break;
                                 case 3:
                                     if(twice%3==0){
-                                        MapActivity.tv_21.setText("移动4g");
-                                        MapActivity.tv_22.setText(a[3]);
-                                        MapActivity.tv_23.setText(a[4]);
-                                        MapActivity.tv_25.setText(strtime);
+                                        if(MapActivity.is_Pause_Continue){
+                                            MapActivity.tv_21.setText("移动4g");
+                                            MapActivity.tv_22.setText(a[3]);
+                                            MapActivity.tv_23.setText(a[4]);
+                                            MapActivity.tv_25.setText(strtime);
+                                        }
                                         twice++;
                                     }else if(twice%3==1){
-                                        MapActivity.tv_31.setText("移动3g");
-                                        MapActivity.tv_32.setText(a[3]);
-                                        MapActivity.tv_33.setText(a[4]);
-                                        MapActivity.tv_35.setText(strtime);
+                                        if(MapActivity.is_Pause_Continue){
+                                            MapActivity.tv_31.setText("移动3g");
+                                            MapActivity.tv_32.setText(a[3]);
+                                            MapActivity.tv_33.setText(a[4]);
+                                            MapActivity.tv_35.setText(strtime);
+                                        }
                                         twice++;
                                     }else if(twice%3==2){
-                                        MapActivity.tv_41.setText("移动2g");
-                                        MapActivity.tv_42.setText(a[3]);
-                                        MapActivity.tv_43.setText(a[4]);
-                                        MapActivity.tv_45.setText(strtime);
+                                        if(MapActivity.is_Pause_Continue){
+                                            MapActivity.tv_41.setText("移动2g");
+                                            MapActivity.tv_42.setText(a[3]);
+                                            MapActivity.tv_43.setText(a[4]);
+                                            MapActivity.tv_45.setText(strtime);
+                                        }
                                         twice++;
                                     }
                                     break;
                                 case 4:
                                     if(twice%3==0){
-                                        MapActivity.tv_21.setText("联通4g");
-                                        MapActivity.tv_22.setText(a[3]);
-                                        MapActivity.tv_23.setText(a[4]);
-                                        MapActivity.tv_25.setText(strtime);
+                                        if(MapActivity.is_Pause_Continue){
+                                            MapActivity.tv_21.setText("联通4g");
+                                            MapActivity.tv_22.setText(a[3]);
+                                            MapActivity.tv_23.setText(a[4]);
+                                            MapActivity.tv_25.setText(strtime);
+                                        }
                                         twice++;
                                     }else if(twice%3==1){
-                                        MapActivity.tv_31.setText("联通3g");
-                                        MapActivity.tv_32.setText(a[3]);
-                                        MapActivity.tv_33.setText(a[4]);
-                                        MapActivity.tv_35.setText(strtime);
+                                        if(MapActivity.is_Pause_Continue){
+                                            MapActivity.tv_31.setText("联通3g");
+                                            MapActivity.tv_32.setText(a[3]);
+                                            MapActivity.tv_33.setText(a[4]);
+                                            MapActivity.tv_35.setText(strtime);
+                                        }
                                         twice++;
                                     }else if(twice%3==2){
-                                        MapActivity.tv_41.setText("联通2g");
-                                        MapActivity.tv_42.setText(a[3]);
-                                        MapActivity.tv_43.setText(a[4]);
-                                        MapActivity.tv_45.setText(strtime);
+                                        if(MapActivity.is_Pause_Continue){
+                                            MapActivity.tv_41.setText("联通2g");
+                                            MapActivity.tv_42.setText(a[3]);
+                                            MapActivity.tv_43.setText(a[4]);
+                                            MapActivity.tv_45.setText(strtime);
+                                        }
                                         twice++;
                                     }
                                     break;
                                 case 6:case 7:case 8:case 9:case 10:case 11:case 12:
-                                    MapActivity.tv_21.setText(mode[web]);
-                                    MapActivity.tv_22.setText(a[3]);
-                                    MapActivity.tv_23.setText(a[4]);
-                                    MapActivity.tv_25.setText(strtime);
-                                    if(!secondshow.isEmpty()){
-                                        MapActivity.tv_41.setText(mode[web]);
-                                        MapActivity.tv_42.setText(secondshow.get("lac"));
-                                        MapActivity.tv_43.setText(secondshow.get("cid"));
-                                        MapActivity.tv_45.setText(secondshow.get("time"));
-                                    }
-                                    if(!firstshow.isEmpty()){
-                                        MapActivity.tv_31.setText(mode[web]);
-                                        MapActivity.tv_32.setText(firstshow.get("lac"));
-                                        MapActivity.tv_33.setText(firstshow.get("cid"));
-                                        MapActivity.tv_35.setText(firstshow.get("time"));
-                                        secondshow.put("lac",firstshow.get("lac"));
-                                        secondshow.put("cid",firstshow.get("cid"));
-                                        secondshow.put("time",firstshow.get("time"));
-                                    }
-                                    firstshow.put("lac",a[3]);
-                                    firstshow.put("cid",a[4]);
-                                    firstshow.put("time",strtime);
-                                    break;
-                                case 13:
-                                    MapActivity.tv_21.setText(mode[web]);
-                                    MapActivity.tv_22.setText(a[0]);
-                                    MapActivity.tv_23.setText(a[1]);
-                                    MapActivity.tv_24.setText(a[2]);
-                                    MapActivity.tv_25.setText(strtime);
-                                    if(!secondshow.isEmpty()){
-                                        MapActivity.tv_41.setText(mode[web]);
-                                        MapActivity.tv_42.setText(secondshow.get("sid"));
-                                        MapActivity.tv_43.setText(secondshow.get("nid"));
-                                        MapActivity.tv_44.setText(secondshow.get("bid"));
-                                        MapActivity.tv_45.setText(secondshow.get("time"));
-                                    }
-                                    if(!firstshow.isEmpty()){
-                                        MapActivity.tv_31.setText(mode[web]);
-                                        MapActivity.tv_32.setText(firstshow.get("sid"));
-                                        MapActivity.tv_33.setText(firstshow.get("nid"));
-                                        MapActivity.tv_34.setText(firstshow.get("bid"));
-                                        MapActivity.tv_35.setText(firstshow.get("time"));
-                                        secondshow.put("sid",firstshow.get("sid"));
-                                        secondshow.put("nid",firstshow.get("nid"));
-                                        secondshow.put("bid",firstshow.get("bid"));
-                                        secondshow.put("time",firstshow.get("time"));
-                                    }
-                                    firstshow.put("sid",a[0]);
-                                    firstshow.put("nid",a[1]);
-                                    firstshow.put("bid",a[2]);
-                                    firstshow.put("time",strtime);
-                                    break;
-                                case 5:
-                                    if(third%2==0){
-                                        MapActivity.tv_21.setText("电信4g");
+                                    if(MapActivity.is_Pause_Continue){
+                                        MapActivity.tv_21.setText(mode[web]);
                                         MapActivity.tv_22.setText(a[3]);
                                         MapActivity.tv_23.setText(a[4]);
                                         MapActivity.tv_25.setText(strtime);
+                                        if(!secondshow.isEmpty()){
+                                            MapActivity.tv_41.setText(mode[web]);
+                                            MapActivity.tv_42.setText(secondshow.get("lac"));
+                                            MapActivity.tv_43.setText(secondshow.get("cid"));
+                                            MapActivity.tv_45.setText(secondshow.get("time"));
+                                        }
+                                        if(!firstshow.isEmpty()){
+                                            MapActivity.tv_31.setText(mode[web]);
+                                            MapActivity.tv_32.setText(firstshow.get("lac"));
+                                            MapActivity.tv_33.setText(firstshow.get("cid"));
+                                            MapActivity.tv_35.setText(firstshow.get("time"));
+                                            secondshow.put("lac",firstshow.get("lac"));
+                                            secondshow.put("cid",firstshow.get("cid"));
+                                            secondshow.put("time",firstshow.get("time"));
+                                        }
+                                        firstshow.put("lac",a[3]);
+                                        firstshow.put("cid",a[4]);
+                                        firstshow.put("time",strtime);
+                                    }
+                                    break;
+                                case 13:
+                                    if(MapActivity.is_Pause_Continue){
+                                        MapActivity.tv_21.setText(mode[web]);
+                                        MapActivity.tv_22.setText(a[0]);
+                                        MapActivity.tv_23.setText(a[1]);
+                                        MapActivity.tv_24.setText(a[2]);
+                                        MapActivity.tv_25.setText(strtime);
+                                        if(!secondshow.isEmpty()){
+                                            MapActivity.tv_41.setText(mode[web]);
+                                            MapActivity.tv_42.setText(secondshow.get("sid"));
+                                            MapActivity.tv_43.setText(secondshow.get("nid"));
+                                            MapActivity.tv_44.setText(secondshow.get("bid"));
+                                            MapActivity.tv_45.setText(secondshow.get("time"));
+                                        }
+                                        if(!firstshow.isEmpty()){
+                                            MapActivity.tv_31.setText(mode[web]);
+                                            MapActivity.tv_32.setText(firstshow.get("sid"));
+                                            MapActivity.tv_33.setText(firstshow.get("nid"));
+                                            MapActivity.tv_34.setText(firstshow.get("bid"));
+                                            MapActivity.tv_35.setText(firstshow.get("time"));
+                                            secondshow.put("sid",firstshow.get("sid"));
+                                            secondshow.put("nid",firstshow.get("nid"));
+                                            secondshow.put("bid",firstshow.get("bid"));
+                                            secondshow.put("time",firstshow.get("time"));
+                                        }
+                                        firstshow.put("sid",a[0]);
+                                        firstshow.put("nid",a[1]);
+                                        firstshow.put("bid",a[2]);
+                                        firstshow.put("time",strtime);
+                                    }
+                                    break;
+                                case 5:
+                                    if(third%2==0){
+                                        if(MapActivity.is_Pause_Continue){
+                                            MapActivity.tv_21.setText("电信4g");
+                                            MapActivity.tv_22.setText(a[3]);
+                                            MapActivity.tv_23.setText(a[4]);
+                                            MapActivity.tv_25.setText(strtime);
+                                        }
                                         third++;
                                     }else if(third%2==1){
-                                        MapActivity.tv_31.setText("电信2g");
-                                        MapActivity.tv_32.setText(a[0]);
-                                        MapActivity.tv_33.setText(a[1]);
-                                        MapActivity.tv_34.setText(a[2]);
-                                        MapActivity.tv_35.setText(strtime);
+                                        if(MapActivity.is_Pause_Continue){
+                                            MapActivity.tv_31.setText("电信2g");
+                                            MapActivity.tv_32.setText(a[0]);
+                                            MapActivity.tv_33.setText(a[1]);
+                                            MapActivity.tv_34.setText(a[2]);
+                                            MapActivity.tv_35.setText(strtime);
+                                        }
                                         third++;
                                     break;
 
@@ -363,7 +395,7 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
                         Date curDate = new Date(System.currentTimeMillis());//获取当前时间
                         String str = formatter.format(curDate);
                         MapActivity.time.setText(str);*/
-                    }
+
                     break;
             }
         }
