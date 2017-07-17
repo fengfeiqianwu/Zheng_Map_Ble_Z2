@@ -55,7 +55,11 @@ import java.util.Objects;
 import java.util.Queue;
 
 import static com.example.zhuoh.zheng_map_ble_z.ConstantData.TOAST;
+import static com.example.zhuoh.zheng_map_ble_z.ConstantData.firstshow;
 import static com.example.zhuoh.zheng_map_ble_z.ConstantData.s;
+import static com.example.zhuoh.zheng_map_ble_z.ConstantData.secondshow;
+import static com.example.zhuoh.zheng_map_ble_z.ConstantData.third;
+import static com.example.zhuoh.zheng_map_ble_z.ConstantData.twice;
 import static com.example.zhuoh.zheng_map_ble_z.ConstantData.web;
 
 public class MapActivity extends AppCompatActivity implements View.OnClickListener,LocationSource, AMapLocationListener{
@@ -456,26 +460,46 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                 mode_state.setText("4G混合");
                 web = 1;
                 LTE_COUNT = -1;
+                twice = 0;
+                third = 0;
+                firstshow.clear();
+                secondshow.clear();
                 break;
             case R.id.twomix:
                 mode_state.setText("2G混合");
                 web = 2;
                 GSM_COUNT = 0;
+                twice = 0;
+                third = 0;
+                firstshow.clear();
+                secondshow.clear();
                 break;
             case R.id.mobilemix:
                 mode_state.setText("移动全网");
                 web = 3;
                 MOBILE_COUNT = 0;
+                twice = 0;
+                third = 0;
+                firstshow.clear();
+                secondshow.clear();
                 break;
             case R.id.unicommix:
                 mode_state.setText("联通全网");
                 web = 4;
                 UNICOM_COUNT = 0;
+                twice = 0;
+                third = 0;
+                firstshow.clear();
+                secondshow.clear();
                 break;
             case R.id.telcommix:
                 mode_state.setText("电信全网");
                 web = 5;
                 TELECOM_COUNT = 0;
+                twice = 0;
+                third = 0;
+                firstshow.clear();
+                secondshow.clear();
                 break;
             case R.id.mobilefour:
                 mode_state.setText("移动4G");
@@ -483,6 +507,10 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     web = 14;
                     WEN_MOBILE_FOUR_TWO_NEI_COUNT = -2;
                 } else {
+                    twice = 0;
+                    third = 0;
+                    firstshow.clear();
+                    secondshow.clear();
                     web = 6;
                     WEB_FOUR_TWO_COUNT = -2;
                 }
@@ -493,6 +521,10 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     web = 15;
                     WEB_THREE_TELTWO_NEI_COUNT = -1;
                 } else {
+                    twice = 0;
+                    third = 0;
+                    firstshow.clear();
+                    secondshow.clear();
                     web = 7;
                     WEB_THREE_TELTWO_COUNT = -1;
                 }
@@ -503,6 +535,10 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     web = 16;
                     WEN_MOBILE_FOUR_TWO_NEI_COUNT = -2;
                 } else {
+                    twice = 0;
+                    third = 0;
+                    firstshow.clear();
+                    secondshow.clear();
                     web = 8;
                     WEB_FOUR_TWO_COUNT = -2;
                 }
@@ -513,6 +549,10 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     web = 17;
                     WEN_MOBILE_FOUR_TWO_NEI_COUNT = -2;
                 } else {
+                    twice = 0;
+                    third = 0;
+                    firstshow.clear();
+                    secondshow.clear();
                     web = 9;
                     WEB_FOUR_TWO_COUNT = -2;
                 }
@@ -523,6 +563,10 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     web = 18;
                     WEB_THREE_TELTWO_NEI_COUNT = -1;
                 } else {
+                    twice = 0;
+                    third = 0;
+                    firstshow.clear();
+                    secondshow.clear();
                     web = 10;
                     WEB_THREE_TELTWO_COUNT = -1;
                 }
@@ -533,6 +577,10 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     web = 19;
                     WEN_MOBILE_FOUR_TWO_NEI_COUNT = -2;
                 } else {
+                    twice = 0;
+                    third = 0;
+                    firstshow.clear();
+                    secondshow.clear();
                     web = 11;
                     WEB_FOUR_TWO_COUNT = -2;
                 }
@@ -543,6 +591,10 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     web = 20;
                     WEN_MOBILE_FOUR_TWO_NEI_COUNT = -2;
                 } else {
+                    twice = 0;
+                    third = 0;
+                    firstshow.clear();
+                    secondshow.clear();
                     web = 12;
                     WEB_FOUR_TWO_COUNT = -2;
                 }
@@ -553,6 +605,10 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     web = 21;
                     WEB_THREE_TELTWO_NEI_COUNT = -1;
                 } else {
+                    twice = 0;
+                    third = 0;
+                    firstshow.clear();
+                    secondshow.clear();
                     web = 13;
                     WEB_THREE_TELTWO_COUNT = -1;
                 }

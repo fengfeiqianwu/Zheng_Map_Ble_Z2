@@ -1,6 +1,8 @@
 package com.example.zhuoh.zheng_map_ble_z;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 /**
@@ -93,6 +95,8 @@ public class ConstantData {
     public static final int TIMER_STATE_WAITACK = 0;
     public static final int TIMEOUT_WAITACK = 5000; /*1.5秒*/
     static ArrayList<Data> s = new ArrayList<Data>();
+    public static Map<String,String> firstshow = new HashMap<>();
+    public static Map<String,String> secondshow = new HashMap<>();
 
 }
 

@@ -20,7 +20,10 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
+import static com.example.zhuoh.zheng_map_ble_z.ConstantData.firstshow;
+import static com.example.zhuoh.zheng_map_ble_z.ConstantData.secondshow;
 import static com.example.zhuoh.zheng_map_ble_z.ConstantData.third;
 import static com.example.zhuoh.zheng_map_ble_z.ConstantData.twice;
 import static com.example.zhuoh.zheng_map_ble_z.ConstantData.web;
@@ -39,6 +42,7 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
     private BluetoothAdapter mBluetoothAdapter = null;
     // 成员对象的聊天服务
     public static BluetoothChatService mChatService = null;
+    String mode[] = {"","4G混合","2G混合","移动全网","联通全网","电信全网","移动4G","移动3G","移动2G","联通4G","联通3G","联通2G","电信4G","电信2G"};
 
     public List<Integer> list_1 = new ArrayList<>();
 
@@ -218,6 +222,59 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
                                         twice++;
                                     }
                                     break;
+                                case 6:case 7:case 8:case 9:case 10:case 11:case 12:
+                                    MapActivity.tv_21.setText(mode[web]);
+                                    MapActivity.tv_22.setText(secondshow.get(a[3]));
+                                    MapActivity.tv_23.setText(secondshow.get(a[4]));
+                                    MapActivity.tv_25.setText(secondshow.get("time"));
+                                    if(!secondshow.isEmpty()){
+                                        MapActivity.tv_41.setText(mode[web]);
+                                        MapActivity.tv_42.setText(secondshow.get("lac"));
+                                        MapActivity.tv_43.setText(secondshow.get("cid"));
+                                        MapActivity.tv_45.setText(secondshow.get("time"));
+                                    }
+                                    if(!firstshow.isEmpty()){
+                                        MapActivity.tv_31.setText(mode[web]);
+                                        MapActivity.tv_32.setText(firstshow.get("lac"));
+                                        MapActivity.tv_33.setText(firstshow.get("cid"));
+                                        MapActivity.tv_35.setText(firstshow.get("time"));
+                                        secondshow.put("lac",firstshow.get("lac"));
+                                        secondshow.put("cid",firstshow.get("cid"));
+                                        secondshow.put("time",firstshow.get("time"));
+                                    }
+                                    firstshow.put("lac",a[3]);
+                                    firstshow.put("cid",a[4]);
+                                    firstshow.put("time",strtime);
+                                    break;
+                                case 13:
+                                    MapActivity.tv_21.setText(mode[web]);
+                                    MapActivity.tv_22.setText(secondshow.get(a[0]));
+                                    MapActivity.tv_23.setText(secondshow.get(a[1]));
+                                    MapActivity.tv_24.setText(secondshow.get(a[2]));
+                                    MapActivity.tv_25.setText(secondshow.get("time"));
+                                    if(!secondshow.isEmpty()){
+                                        MapActivity.tv_41.setText(mode[web]);
+                                        MapActivity.tv_42.setText(secondshow.get("sid"));
+                                        MapActivity.tv_43.setText(secondshow.get("nid"));
+                                        MapActivity.tv_44.setText(secondshow.get("bid"));
+                                        MapActivity.tv_45.setText(secondshow.get("time"));
+                                    }
+                                    if(!firstshow.isEmpty()){
+                                        MapActivity.tv_31.setText(mode[web]);
+                                        MapActivity.tv_32.setText(firstshow.get("sid"));
+                                        MapActivity.tv_33.setText(firstshow.get("nid"));
+                                        MapActivity.tv_34.setText(firstshow.get("bid"));
+                                        MapActivity.tv_35.setText(firstshow.get("time"));
+                                        secondshow.put("sid",firstshow.get("sid"));
+                                        secondshow.put("nid",firstshow.get("nid"));
+                                        secondshow.put("bid",firstshow.get("bid"));
+                                        secondshow.put("time",firstshow.get("time"));
+                                    }
+                                    firstshow.put("lac",a[0]);
+                                    firstshow.put("cid",a[1]);
+                                    firstshow.put("bid",a[2]);
+                                    firstshow.put("time",strtime);
+                                    break;
                                 case 5:
                                     if(third%2==0){
                                         MapActivity.tv_21.setText("电信4g");
@@ -233,6 +290,7 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
                                         MapActivity.tv_35.setText(strtime);
                                         third++;
                                     break;
+
                             }
                             if(data.startsWith("AT+SCELLINFO+SCELLINFO")){
                                 data = data.substring(data.indexOf(":")+1,data.length()-2);
