@@ -224,9 +224,9 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
                                     break;
                                 case 6:case 7:case 8:case 9:case 10:case 11:case 12:
                                     MapActivity.tv_21.setText(mode[web]);
-                                    MapActivity.tv_22.setText(secondshow.get(a[3]));
-                                    MapActivity.tv_23.setText(secondshow.get(a[4]));
-                                    MapActivity.tv_25.setText(secondshow.get("time"));
+                                    MapActivity.tv_22.setText(a[3]);
+                                    MapActivity.tv_23.setText(a[4]);
+                                    MapActivity.tv_25.setText(strtime);
                                     if(!secondshow.isEmpty()){
                                         MapActivity.tv_41.setText(mode[web]);
                                         MapActivity.tv_42.setText(secondshow.get("lac"));
@@ -248,10 +248,10 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
                                     break;
                                 case 13:
                                     MapActivity.tv_21.setText(mode[web]);
-                                    MapActivity.tv_22.setText(secondshow.get(a[0]));
-                                    MapActivity.tv_23.setText(secondshow.get(a[1]));
-                                    MapActivity.tv_24.setText(secondshow.get(a[2]));
-                                    MapActivity.tv_25.setText(secondshow.get("time"));
+                                    MapActivity.tv_22.setText(a[0]);
+                                    MapActivity.tv_23.setText(a[1]);
+                                    MapActivity.tv_24.setText(a[2]);
+                                    MapActivity.tv_25.setText(strtime);
                                     if(!secondshow.isEmpty()){
                                         MapActivity.tv_41.setText(mode[web]);
                                         MapActivity.tv_42.setText(secondshow.get("sid"));
@@ -270,8 +270,8 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
                                         secondshow.put("bid",firstshow.get("bid"));
                                         secondshow.put("time",firstshow.get("time"));
                                     }
-                                    firstshow.put("lac",a[0]);
-                                    firstshow.put("cid",a[1]);
+                                    firstshow.put("sid",a[0]);
+                                    firstshow.put("nid",a[1]);
                                     firstshow.put("bid",a[2]);
                                     firstshow.put("time",strtime);
                                     break;

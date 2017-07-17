@@ -421,9 +421,15 @@ public class BluetoothChatService {
             //data.replaceAll("\r|\n", "");
             if(data.endsWith("OK")){
                 Log.i(TAG, data);
-                if(data.contains(":")){
+                if(data.contains(":")||data.equals("AT+SCELLINFOOK")||data.equals("AT+BSINFOOK")){
                     /*data = data.substring(data.indexOf(":"),data.length()-2);
                     String a[]= data.split(",");*/
+                    if(data.equals("AT+SCELLINFOOK")){
+                        data = "0:0,0,0,0,0,0,0,0";
+                    }
+                    if(data.equals("AT+BSINFOOK")){
+                        data = "0:0,0,0,0,0,0,0,0";
+                    }
                     deal_handler(data);
                     data = "";
                 }else{

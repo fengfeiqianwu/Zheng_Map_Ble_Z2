@@ -464,6 +464,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                 third = 0;
                 firstshow.clear();
                 secondshow.clear();
+                cleartv();
                 break;
             case R.id.twomix:
                 mode_state.setText("2G混合");
@@ -473,6 +474,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                 third = 0;
                 firstshow.clear();
                 secondshow.clear();
+                cleartv();
                 break;
             case R.id.mobilemix:
                 mode_state.setText("移动全网");
@@ -482,6 +484,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                 third = 0;
                 firstshow.clear();
                 secondshow.clear();
+                cleartv();
                 break;
             case R.id.unicommix:
                 mode_state.setText("联通全网");
@@ -491,6 +494,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                 third = 0;
                 firstshow.clear();
                 secondshow.clear();
+                cleartv();
                 break;
             case R.id.telcommix:
                 mode_state.setText("电信全网");
@@ -500,6 +504,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                 third = 0;
                 firstshow.clear();
                 secondshow.clear();
+                cleartv();
                 break;
             case R.id.mobilefour:
                 mode_state.setText("移动4G");
@@ -511,6 +516,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     third = 0;
                     firstshow.clear();
                     secondshow.clear();
+                    cleartv();
                     web = 6;
                     WEB_FOUR_TWO_COUNT = -2;
                 }
@@ -525,6 +531,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     third = 0;
                     firstshow.clear();
                     secondshow.clear();
+                    cleartv();
                     web = 7;
                     WEB_THREE_TELTWO_COUNT = -1;
                 }
@@ -539,6 +546,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     third = 0;
                     firstshow.clear();
                     secondshow.clear();
+                    cleartv();
                     web = 8;
                     WEB_FOUR_TWO_COUNT = -2;
                 }
@@ -553,6 +561,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     third = 0;
                     firstshow.clear();
                     secondshow.clear();
+                    cleartv();
                     web = 9;
                     WEB_FOUR_TWO_COUNT = -2;
                 }
@@ -567,6 +576,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     third = 0;
                     firstshow.clear();
                     secondshow.clear();
+                    cleartv();
                     web = 10;
                     WEB_THREE_TELTWO_COUNT = -1;
                 }
@@ -581,6 +591,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     third = 0;
                     firstshow.clear();
                     secondshow.clear();
+                    cleartv();
                     web = 11;
                     WEB_FOUR_TWO_COUNT = -2;
                 }
@@ -595,6 +606,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     third = 0;
                     firstshow.clear();
                     secondshow.clear();
+                    cleartv();
                     web = 12;
                     WEB_FOUR_TWO_COUNT = -2;
                 }
@@ -609,6 +621,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     third = 0;
                     firstshow.clear();
                     secondshow.clear();
+                    cleartv();
                     web = 13;
                     WEB_THREE_TELTWO_COUNT = -1;
                 }
@@ -1523,5 +1536,22 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+    void cleartv(){
+        tv_21.setText("");
+        tv_22.setText("");
+        tv_23.setText("");
+        tv_24.setText("");
+        tv_25.setText("");
+        tv_31.setText("");
+        tv_32.setText("");
+        tv_33.setText("");
+        tv_34.setText("");
+        tv_35.setText("");
+        tv_41.setText("");
+        tv_42.setText("");
+        tv_43.setText("");
+        tv_44.setText("");
+        tv_45.setText("");
     }
 }
