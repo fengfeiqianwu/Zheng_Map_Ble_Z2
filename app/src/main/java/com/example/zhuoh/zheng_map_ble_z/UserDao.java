@@ -58,15 +58,20 @@ public class UserDao {
     public void getAllObjects() {
         // 获取SQLiteDatabase对象
         SQLiteDatabase db = helper.getReadableDatabase();
-        Cursor c = db.rawQuery("select id,lac,cid,bid,mode from queryinfo",null);
+        Cursor c = db.rawQuery("select id,time,lat,lng,lac,cid,bid,cellMode,channel,rxlevel from basedata",null);
 
         while (c.moveToNext()) {
             Map<String, Object> map = new HashMap<String, Object>();
+            map.put("time", c.getString(c.getColumnIndex("time")));
+            map.put("lat", c.getString(c.getColumnIndex("lat")));
+            map.put("lng", c.getString(c.getColumnIndex("lng")));
             map.put("lac", c.getString(c.getColumnIndex("lac")));
             map.put("cid", c.getString(c.getColumnIndex("cid")));
             map.put("bid", c.getString(c.getColumnIndex("bid")));
             map.put("id", c.getInt(c.getColumnIndex("id")));
-            map.put("mode", c.getString(c.getColumnIndex("mode")));
+            map.put("cellMode", c.getString(c.getColumnIndex("cellMode")));
+            map.put("channel", c.getString(c.getColumnIndex("channel")));
+            map.put("rxlevel", c.getString(c.getColumnIndex("rxlevel")));
             data.add(map);
         }
         c.close();

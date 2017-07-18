@@ -11,7 +11,6 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -31,25 +30,30 @@
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="7b6b83022635fe1aa4a0ad77ad117fa5" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".DeviceListActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/select_device"
             android:screenOrientation="portrait"
             android:theme="@style/dialog" />
-        <activity android:name=".MapActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".MapActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Ble_Activity"
-            android:launchMode="singleInstance"/>
-        <service android:name="com.amap.api.location.APSService"/>
+            android:launchMode="singleInstance" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".DataActivity"></activity>
     </application>
 
 </manifest>

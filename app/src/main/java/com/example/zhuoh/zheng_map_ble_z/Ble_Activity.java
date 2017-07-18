@@ -126,6 +126,64 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
                             }
                         }else{
                             data = data.substring(data.indexOf(":")+1,data.length()-2);
+                            if(data.startsWith("AT+SCELLINFO+SCELLINFO")){
+                                data = data.substring(data.indexOf(":")+1,data.length()-2);
+                                String a[]= data.split(",");
+                                /*MapActivity.lattime_content.setText(strtime);
+                                MapActivity.mcc_content.setText(a[1]);
+                                MapActivity.mnc_content.setText(a[2]);
+                                MapActivity.lac_content.setText(a[3]);
+                                MapActivity.ci_content.setText(a[4]);*/
+                                if(MapActivity.is_loc_data){
+                                    Boolean mgsm = a[0].equals("0")&&a[2].equals("00");//移动2g
+                                    Boolean ugsm = a[0].equals("0")&&a[2].equals("00");//联通2g
+                                    Boolean mtd = a[0].equals("1");//移动3g
+                                    Boolean mwcd = a[0].equals("2");//联通3g
+                                    Boolean mlte = a[0].equals("3")&&a[2].equals("00");//移动4g
+                                    Boolean ulte = a[0].equals("3")&&a[2].equals("01");//联通4g
+                                    Boolean clte = a[0].equals("3")&&a[2].equals("11");//电信4g
+                                    MapActivity.tempdata.put("strtime",strtime);
+                                    if(mgsm){
+                                        MapActivity.tempdata.put("cellMode","0");
+                                    }else if(ugsm){
+                                        MapActivity.tempdata.put("cellMode","1");
+                                    }else if(mtd){
+                                        MapActivity.tempdata.put("cellMode","3");
+                                    }else if(mwcd){
+                                        MapActivity.tempdata.put("cellMode","4");
+                                    }else if(mlte){
+                                        MapActivity.tempdata.put("cellMode","5");
+                                    }else if(ulte){
+                                        MapActivity.tempdata.put("cellMode","6");
+                                    }else if(clte){
+                                        MapActivity.tempdata.put("cellMode","7");
+                                    }
+                                    MapActivity.tempdata.put("strmcc",a[1]);
+                                    MapActivity.tempdata.put("strmnc",a[2]);
+                                    MapActivity.tempdata.put("strlac",a[3]);
+                                    MapActivity.tempdata.put("strcid",a[4]);
+                                    MapActivity.tempdata.put("strchannel",a[5]);
+                                    MapActivity.tempdata.put("strrxlevel",a[7]);
+                                    MapActivity.tempdata.put("strbid","0");
+                                    //MapActivity.is_loc_data = false;
+                                }
+                            }else if(data.startsWith("AT+BSINFO+BSINFO")){
+                                data = data.substring(data.indexOf(":")+1,data.length()-2);
+                                String a[]= data.split(",");
+                                /*MapActivity.lattime_content.setText(strtime);
+                                MapActivity.sid_content.setText(a[0]);
+                                MapActivity.nid_content.setText(a[1]);
+                                MapActivity.bid_content.setText(a[2]);*/
+                                MapActivity.tempdata.put("strtime",strtime);
+                                MapActivity.tempdata.put("cellMode","2");
+                                MapActivity.tempdata.put("strmcc","0");
+                                MapActivity.tempdata.put("strmnc","0");
+                                MapActivity.tempdata.put("strlac",a[0]);
+                                MapActivity.tempdata.put("strcid",a[1]);
+                                MapActivity.tempdata.put("strbid",a[2]);
+                                MapActivity.tempdata.put("strchannel",a[3]);
+                                MapActivity.tempdata.put("strrxlevel",a[5]);
+                            }
                             String a[]= data.split(",");
                             switch (web){
                                 /*data = data.substring(data.indexOf(":")+1,data.length()-2);
@@ -324,65 +382,7 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
                                     break;
 
                             }
-                            if(data.startsWith("AT+SCELLINFO+SCELLINFO")){
-                                data = data.substring(data.indexOf(":")+1,data.length()-2);
-                                //String a[]= data.split(",");
-                                MapActivity.lattime_content.setText(strtime);
-                                MapActivity.mcc_content.setText(a[1]);
-                                MapActivity.mnc_content.setText(a[2]);
-                                MapActivity.lac_content.setText(a[3]);
-                                MapActivity.ci_content.setText(a[4]);
-                                if(MapActivity.is_loc_data){
-                                    Boolean mgsm = a[0].equals("0")&&a[2].equals("00");//移动2g
-                                    Boolean ugsm = a[0].equals("0")&&a[2].equals("00");//联通2g
-                                    Boolean mtd = a[0].equals("1");//移动3g
-                                    Boolean mwcd = a[0].equals("2");//联通3g
-                                    Boolean mlte = a[0].equals("3")&&a[2].equals("00");//移动4g
-                                    Boolean ulte = a[0].equals("3")&&a[2].equals("01");//联通4g
-                                    Boolean clte = a[0].equals("3")&&a[2].equals("11");//电信4g
-                                    MapActivity.tempdata.put("strtime",strtime);
-                                    if(mgsm){
-                                        MapActivity.tempdata.put("cellMode","0");
-                                    }else if(ugsm){
-                                        MapActivity.tempdata.put("cellMode","1");
-                                    }else if(mtd){
-                                        MapActivity.tempdata.put("cellMode","3");
-                                    }else if(mwcd){
-                                        MapActivity.tempdata.put("cellMode","4");
-                                    }else if(mlte){
-                                        MapActivity.tempdata.put("cellMode","5");
-                                    }else if(ulte){
-                                        MapActivity.tempdata.put("cellMode","6");
-                                    }else if(clte){
-                                        MapActivity.tempdata.put("cellMode","7");
-                                    }
-                                    MapActivity.tempdata.put("strmcc",a[1]);
-                                    MapActivity.tempdata.put("strmnc",a[2]);
-                                    MapActivity.tempdata.put("strlac",a[3]);
-                                    MapActivity.tempdata.put("strcid",a[4]);
-                                    MapActivity.tempdata.put("strchannel",a[5]);
-                                    MapActivity.tempdata.put("strrxlevel",a[7]);
-                                    MapActivity.tempdata.put("strbid","0");
-                                    //MapActivity.is_loc_data = false;
-                                }
-                            }else if(data.startsWith("AT+BSINFO+BSINFO")){
-                                data = data.substring(data.indexOf(":")+1,data.length()-2);
-                                //String a[]= data.split(",");
-                                MapActivity.lattime_content.setText(strtime);
-                                MapActivity.sid_content.setText(a[0]);
-                                MapActivity.nid_content.setText(a[1]);
-                                MapActivity.bid_content.setText(a[2]);
-                                MapActivity.tempdata.put("strtime",strtime);
-                                MapActivity.tempdata.put("cellMode","2");
-                                MapActivity.tempdata.put("strmcc","0");
-                                MapActivity.tempdata.put("strmnc","0");
-                                MapActivity.tempdata.put("strlac",a[0]);
-                                MapActivity.tempdata.put("strcid",a[1]);
-                                MapActivity.tempdata.put("strbid",a[2]);
-                                MapActivity.tempdata.put("strchannel",a[3]);
-                                MapActivity.tempdata.put("strrxlevel",a[5]);
 
-                            }
                         }
 
 

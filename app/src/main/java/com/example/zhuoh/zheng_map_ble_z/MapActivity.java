@@ -1289,6 +1289,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                 mAMap.moveCamera(CameraUpdateFactory.changeLatLng(mylocation));
                 if (drawMap) {
                     mPolyoptions.add(mylocation);
+                    redrawline();
                     String strlat = Double.toString(amapLocation.getLatitude());
                     String strlon = Double.toString(amapLocation.getLongitude());
                     mlat.setText(strlat);
@@ -1332,9 +1333,6 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                         tempdata.clear();
                         is_loc_data = false;
                     }
-
-
-                    redrawline();
                 }
             } else {
                 String errText = "定位失败," + amapLocation.getErrorCode() + ": "
@@ -1471,10 +1469,10 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
         {
             case R.id.start:
                 //开始
-                mAMap.clear(true);
                 if (!ConstantData.Flag_BtConnected)
                     Toast.makeText(getApplicationContext(),R.string.nonconnect, Toast.LENGTH_SHORT).show();
                 else{
+                    mAMap.clear(true);
                     is_Toast = true;
                     is_Start = true;
                     drawMap = true;

@@ -12,6 +12,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     /*Button*/
     public static Button btn_zheng_bl_connect;
     public static Button btn_zheng_map_content;
+    public static Button btn_zheng_map_data;
 
     // 成员对象的聊天服务
 
@@ -27,8 +28,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btn_zheng_bl_connect.setText("定位助手");
         btn_zheng_map_content = (Button) findViewById(R.id.btn_roadtest);
         btn_zheng_map_content.setText("路测采集");
+        btn_zheng_map_data = (Button)findViewById(R.id.btn_datasearch);
         btn_zheng_bl_connect.setOnClickListener(this);
         btn_zheng_map_content.setOnClickListener(this);
+        btn_zheng_map_data.setOnClickListener(this);
     }
 
     /**
@@ -48,6 +51,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.btn_roadtest:
                 Intent intent_Map = new Intent(MainActivity.this, MapActivity.class);
                 startActivity(intent_Map);
+                break;
+            case R.id.btn_datasearch:
+                Intent intent_Data = new Intent(MainActivity.this, DataActivity.class);
+                startActivity(intent_Data);
                 break;
             default:
         }
