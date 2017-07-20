@@ -90,21 +90,51 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
                         Date curDate = new Date(System.currentTimeMillis());//获取当前时间
                         String strtime = formatter.format(curDate);
                         if(MapActivity.is_Neizone){
-                            MapActivity.latttt_content.setText(strtime);
+
                             if(data.startsWith("AT+SCELLINFO+SCELLINFO")){
                                 data = data.substring(data.indexOf(":")+1,data.length()-2);
-                                MapActivity.first_content.setText(data);
+                                String a[] = data.split(",");
+                                MapActivity.nb_tv_21.setText(a[3]);
+                                MapActivity.nb_tv_22.setText(a[4]);
+                                MapActivity.nb_tv_24.setText(a[5]);
+                                MapActivity.nb_tv_25.setText(a[7]);
+                                MapActivity.nb_tv_26.setText(strtime);
                             }else if(data.startsWith("AT+NCELLINFO+NCELLINFO:")){
                                 data = data.substring(data.indexOf(":")+1,data.length()-2);
                                 data = data.replace("+NCELLINFO:","*");
                                 Log.i(TAG,data);
                                 String a[] = data.split("\\*");
-                                MapActivity.second_content.setText(a[0]);
-                                MapActivity.third_content.setText(a[1]);
-                                MapActivity.fourth_content.setText(a[2]);
-                                MapActivity.fifth_content.setText(a[3]);
-                                MapActivity.sixth_content.setText(a[4]);
-                                MapActivity.seventh_content.setText(a[5]);
+                                String a0[] = a[0].split(",");
+                                MapActivity.nb_tv_31.setText(a0[5]);
+                                MapActivity.nb_tv_32.setText(a0[6]);
+                                MapActivity.nb_tv_34.setText(a0[7]);
+                                MapActivity.nb_tv_35.setText(a0[9]);
+                                String a1[] = a[1].split(",");
+                                MapActivity.nb_tv_41.setText(a1[5]);
+                                MapActivity.nb_tv_42.setText(a1[6]);
+                                MapActivity.nb_tv_44.setText(a1[7]);
+                                MapActivity.nb_tv_45.setText(a1[9]);
+                                String a2[] = a[2].split(",");
+                                MapActivity.nb_tv_51.setText(a2[5]);
+                                MapActivity.nb_tv_52.setText(a2[6]);
+                                MapActivity.nb_tv_54.setText(a2[7]);
+                                MapActivity.nb_tv_55.setText(a2[9]);
+                                String a3[] = a[3].split(",");
+                                MapActivity.nb_tv_61.setText(a3[5]);
+                                MapActivity.nb_tv_62.setText(a3[6]);
+                                MapActivity.nb_tv_64.setText(a3[7]);
+                                MapActivity.nb_tv_65.setText(a3[9]);
+                                String a4[] = a[4].split(",");
+                                MapActivity.nb_tv_71.setText(a4[5]);
+                                MapActivity.nb_tv_72.setText(a4[6]);
+                                MapActivity.nb_tv_74.setText(a4[7]);
+                                MapActivity.nb_tv_75.setText(a4[9]);
+                                String a5[] = a[5].split(",");
+                                MapActivity.nb_tv_81.setText(a5[5]);
+                                MapActivity.nb_tv_82.setText(a5[6]);
+                                MapActivity.nb_tv_84.setText(a5[7]);
+                                MapActivity.nb_tv_85.setText(a5[9]);
+                                MapActivity.nb_tv_time.setText(strtime);
                             }else if(data.startsWith("AT+BSINFO+BSINFO")){
                                 data = data.substring(data.indexOf(":")+1,data.length()-2);
                                 if(data.contains("+BSINFO:")){

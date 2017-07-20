@@ -31,7 +31,7 @@
                 android:orientation="vertical"
                 android:background="#50323232"
                 android:visibility="gone"
-                android:id="@+id/zone">
+                >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -395,280 +395,934 @@
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+
             <TableLayout
+                android:id="@+id/roadtest"
                 android:layout_width="match_parent"
                 android:layout_height="66dip"
                 android:layout_alignParentBottom="true"
-                android:id="@+id/roadtest"
-                android:visibility="visible"
-                android:stretchColumns="*">
+                android:stretchColumns="*"
+                android:visibility="visible">
+
                 <TableRow
-                    android:layout_height="15dip"
+                    android:id="@+id/tr_counts"
                     android:layout_width="wrap_content"
-                    android:layout_marginBottom="1dp"
-                    android:id="@+id/tr_counts">
+                    android:layout_height="15dip"
+                    android:layout_marginBottom="1dp">
+
                     <TextView
                         android:id="@+id/tv_11"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
-                        android:text="制式"
                         android:layout_marginRight="1dp"
-                        android:gravity="center"
-                        android:ellipsize="end"
                         android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text="制式"
                         android:textColor="#000000"
-                        android:textStyle="bold"
-                        />
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/tv_12"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
-                        android:text="LAC"
-                        android:gravity="center"
                         android:layout_marginRight="1dp"
-                        android:ellipsize="end"
                         android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text="LAC"
                         android:textColor="#000000"
-                        android:textStyle="bold"
-                        />
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/tv_13"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
                         android:layout_marginRight="1dp"
+                        android:background="#30222222"
                         android:ellipsize="end"
                         android:gravity="center"
                         android:text="CID"
-                        android:background="#30222222"
                         android:textColor="#000000"
+                        android:textSize="10sp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/tv_14"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
                         android:layout_marginRight="1dp"
+                        android:background="#30222222"
                         android:ellipsize="end"
                         android:gravity="center"
                         android:text="SID"
-                        android:background="#30222222"
                         android:textColor="#000000"
+                        android:textSize="10sp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/tv_15"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
+                        android:background="#30222222"
                         android:ellipsize="end"
                         android:gravity="center"
                         android:text="时间"
-                        android:background="#30222222"
                         android:textColor="#000000"
+                        android:textSize="10sp"
                         android:textStyle="bold" />
                 </TableRow>
+
                 <TableRow
-                    android:layout_height="15dip"
+                    android:id="@+id/tr_counts2"
                     android:layout_width="wrap_content"
-                    android:layout_marginBottom="1dp"
-                    android:id="@+id/tr_counts2">
+                    android:layout_height="15dip"
+                    android:layout_marginBottom="1dp">
+
                     <TextView
                         android:id="@+id/tv_21"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
-                        android:text=""
                         android:layout_marginRight="1dp"
-                        android:gravity="center"
-                        android:ellipsize="end"
                         android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text=""
                         android:textColor="#000000"
-                        android:textStyle="bold"
-                        />
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/tv_22"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
-                        android:text=""
-                        android:gravity="center"
                         android:layout_marginRight="1dp"
-                        android:ellipsize="end"
                         android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text=""
                         android:textColor="#000000"
-                        android:textStyle="bold"
-                        />
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/tv_23"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
                         android:layout_marginRight="1dp"
+                        android:background="#30222222"
                         android:ellipsize="end"
                         android:gravity="center"
                         android:text=""
-                        android:background="#30222222"
                         android:textColor="#000000"
+                        android:textSize="10sp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/tv_24"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
                         android:layout_marginRight="1dp"
+                        android:background="#30222222"
                         android:ellipsize="end"
                         android:gravity="center"
                         android:text=""
-                        android:background="#30222222"
                         android:textColor="#000000"
+                        android:textSize="10sp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/tv_25"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
+                        android:background="#30222222"
                         android:ellipsize="end"
                         android:gravity="center"
                         android:text=""
-                        android:background="#30222222"
                         android:textColor="#000000"
+                        android:textSize="10sp"
                         android:textStyle="bold" />
                 </TableRow>
+
                 <TableRow
-                    android:layout_height="15dip"
+                    android:id="@+id/tr_counts3"
                     android:layout_width="wrap_content"
-                    android:layout_marginBottom="1dp"
-                    android:id="@+id/tr_counts3">
+                    android:layout_height="15dip"
+                    android:layout_marginBottom="1dp">
+
                     <TextView
                         android:id="@+id/tv_31"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
-                        android:text=""
                         android:layout_marginRight="1dp"
-                        android:gravity="center"
-                        android:ellipsize="end"
                         android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text=""
                         android:textColor="#000000"
-                        android:textStyle="bold"
-                        />
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/tv_32"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
-                        android:text=""
-                        android:gravity="center"
                         android:layout_marginRight="1dp"
-                        android:ellipsize="end"
                         android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text=""
                         android:textColor="#000000"
-                        android:textStyle="bold"
-                        />
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/tv_33"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
                         android:layout_marginRight="1dp"
+                        android:background="#30222222"
                         android:ellipsize="end"
                         android:gravity="center"
                         android:text=""
-                        android:background="#30222222"
                         android:textColor="#000000"
+                        android:textSize="10sp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/tv_34"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
                         android:layout_marginRight="1dp"
+                        android:background="#30222222"
                         android:ellipsize="end"
                         android:gravity="center"
                         android:text=""
-                        android:background="#30222222"
                         android:textColor="#000000"
+                        android:textSize="10sp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/tv_35"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
+                        android:background="#30222222"
                         android:ellipsize="end"
                         android:gravity="center"
                         android:text=""
-                        android:background="#30222222"
                         android:textColor="#000000"
+                        android:textSize="10sp"
                         android:textStyle="bold" />
                 </TableRow>
+
                 <TableRow
-                    android:layout_height="15dip"
+                    android:id="@+id/tr_counts4"
                     android:layout_width="wrap_content"
-                    android:id="@+id/tr_counts4">
+                    android:layout_height="15dip">
+
                     <TextView
                         android:id="@+id/tv_41"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
-                        android:text=""
                         android:layout_marginRight="1dp"
-                        android:gravity="center"
-                        android:ellipsize="end"
                         android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text=""
                         android:textColor="#000000"
-                        android:textStyle="bold"
-                        />
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/tv_42"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
-                        android:text=""
-                        android:gravity="center"
                         android:layout_marginRight="1dp"
-                        android:ellipsize="end"
                         android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text=""
                         android:textColor="#000000"
-                        android:textStyle="bold"
-                        />
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/tv_43"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
                         android:layout_marginRight="1dp"
+                        android:background="#30222222"
                         android:ellipsize="end"
                         android:gravity="center"
                         android:text=""
-                        android:background="#30222222"
                         android:textColor="#000000"
+                        android:textSize="10sp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/tv_44"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
                         android:layout_marginRight="1dp"
+                        android:background="#30222222"
                         android:ellipsize="end"
                         android:gravity="center"
                         android:text=""
-                        android:background="#30222222"
                         android:textColor="#000000"
+                        android:textSize="10sp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/tv_45"
                         android:layout_width="1dip"
                         android:layout_height="15dip"
-                        android:textSize="10sp"
+                        android:background="#30222222"
                         android:ellipsize="end"
                         android:gravity="center"
                         android:text=""
-                        android:background="#30222222"
                         android:textColor="#000000"
+                        android:textSize="10sp"
                         android:textStyle="bold" />
                 </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/zone"
+                android:layout_width="match_parent"
+                android:layout_height="127dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="1dp"
+                android:visibility="gone"
+                android:stretchColumns="*">
+                <TableRow
+                    android:id="@+id/nb_table_r1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dip"
+                    android:layout_marginBottom="1dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/nb_tv_11"
+                        android:layout_width="1dip"
+                        android:layout_height="15dip"
+                        android:layout_marginRight="1dp"
+                        android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text="LAC"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nb_tv_12"
+                        android:layout_width="1dip"
+                        android:layout_height="15dip"
+                        android:layout_marginRight="1dp"
+                        android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text="CID"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nb_tv_13"
+                        android:layout_width="1dip"
+                        android:layout_height="15dip"
+                        android:layout_marginRight="1dp"
+                        android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text="BID"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nb_tv_14"
+                        android:layout_width="1dip"
+                        android:layout_height="15dip"
+                        android:layout_marginRight="1dp"
+                        android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text="Channel"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nb_tv_15"
+                        android:layout_width="1dip"
+                        android:layout_height="15dip"
+                        android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text="RSSI"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="1dp"/>
+
+                    <TextView
+                        android:id="@+id/nb_tv_16"
+                        android:layout_width="1dip"
+                        android:layout_height="15dip"
+                        android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text="TIME"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/nb_table_r2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dip"
+                    android:layout_marginBottom="1dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/nb_tv_21"
+                        android:layout_width="1dip"
+                        android:layout_height="15dip"
+                        android:layout_marginRight="1dp"
+                        android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nb_tv_22"
+                        android:layout_width="1dip"
+                        android:layout_height="15dip"
+                        android:layout_marginRight="1dp"
+                        android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nb_tv_23"
+                        android:layout_width="1dip"
+                        android:layout_height="15dip"
+                        android:layout_marginRight="1dp"
+                        android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nb_tv_24"
+                        android:layout_width="1dip"
+                        android:layout_height="15dip"
+                        android:layout_marginRight="1dp"
+                        android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nb_tv_25"
+                        android:layout_width="1dip"
+                        android:layout_height="15dip"
+                        android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="1dp"/>
+                    <TextView
+                        android:id="@+id/nb_tv_26"
+                        android:layout_width="1dip"
+                        android:layout_height="15dip"
+                        android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="1dp"/>
+
+                </TableRow>
+                <LinearLayout>
+                    <TableLayout
+                        android:layout_width="300dip"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="*">
+
+                        <TableRow
+                            android:id="@+id/nb_table_r3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dip"
+                            android:layout_marginBottom="1dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/nb_tv_31"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_32"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_33"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_34"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_35"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:layout_marginRight="1dp"/>
+
+                        </TableRow>
+                        <TableRow
+                            android:id="@+id/nb_table_r4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dip"
+                            android:layout_marginBottom="1dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/nb_tv_41"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_42"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_43"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_44"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_45"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:layout_marginRight="1dp"/>
+
+                        </TableRow>
+                        <TableRow
+                            android:id="@+id/nb_table_r5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dip"
+                            android:layout_marginBottom="1dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/nb_tv_51"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_52"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_53"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_54"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_55"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:layout_marginRight="1dp"/>
+
+                        </TableRow>
+                        <TableRow
+                            android:id="@+id/nb_table_r6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dip"
+                            android:layout_marginBottom="1dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/nb_tv_61"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_62"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_63"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_64"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_65"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:layout_marginRight="1dp"/>
+
+                        </TableRow>
+                        <TableRow
+                            android:id="@+id/nb_table_r7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dip"
+                            android:layout_marginBottom="1dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/nb_tv_71"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_72"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_73"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_74"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_75"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:layout_marginRight="1dp"/>
+
+                        </TableRow>
+                        <TableRow
+                            android:id="@+id/nb_table_r8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dip"
+                            android:layout_marginBottom="1dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/nb_tv_81"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_82"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_83"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_84"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:layout_marginRight="1dp"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nb_tv_85"
+                                android:layout_width="1dip"
+                                android:layout_height="15dip"
+                                android:background="#30222222"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:layout_marginRight="1dp"/>
+
+                        </TableRow>
+                    </TableLayout>
+                    <TextView
+                        android:layout_width="60dip"
+                        android:id="@+id/nb_tv_time"
+                        android:background="#30222222"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_height="match_parent"
+                        />
+                </LinearLayout>
+
             </TableLayout>
         </RelativeLayout>
     </LinearLayout>

@@ -126,6 +126,44 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
     public static TextView tv_44;
     public static TextView tv_45;
 
+    public static TextView nb_tv_21;
+    public static TextView nb_tv_22;
+    public static TextView nb_tv_23;
+    public static TextView nb_tv_24;
+    public static TextView nb_tv_25;
+    public static TextView nb_tv_26;
+    public static TextView nb_tv_31;
+    public static TextView nb_tv_32;
+    public static TextView nb_tv_33;
+    public static TextView nb_tv_34;
+    public static TextView nb_tv_35;
+    public static TextView nb_tv_41;
+    public static TextView nb_tv_42;
+    public static TextView nb_tv_43;
+    public static TextView nb_tv_44;
+    public static TextView nb_tv_45;
+    public static TextView nb_tv_51;
+    public static TextView nb_tv_52;
+    public static TextView nb_tv_53;
+    public static TextView nb_tv_54;
+    public static TextView nb_tv_55;
+    public static TextView nb_tv_61;
+    public static TextView nb_tv_62;
+    public static TextView nb_tv_63;
+    public static TextView nb_tv_64;
+    public static TextView nb_tv_65;
+    public static TextView nb_tv_71;
+    public static TextView nb_tv_72;
+    public static TextView nb_tv_73;
+    public static TextView nb_tv_74;
+    public static TextView nb_tv_75;
+    public static TextView nb_tv_81;
+    public static TextView nb_tv_82;
+    public static TextView nb_tv_83;
+    public static TextView nb_tv_84;
+    public static TextView nb_tv_85;
+    public static TextView nb_tv_time;
+
 
     /*邻区*/
     public static TextView latttt_content;
@@ -235,6 +273,44 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
         tv_45 = (TextView)findViewById(R.id.tv_45);
 
         /*邻区*/
+        nb_tv_21 = (TextView)findViewById(R.id.nb_tv_21);
+        nb_tv_22 = (TextView)findViewById(R.id.nb_tv_22);
+        nb_tv_23 = (TextView)findViewById(R.id.nb_tv_23);
+        nb_tv_24 = (TextView)findViewById(R.id.nb_tv_24);
+        nb_tv_25 = (TextView)findViewById(R.id.nb_tv_25);
+        nb_tv_26 = (TextView)findViewById(R.id.nb_tv_26);
+        nb_tv_31 = (TextView)findViewById(R.id.nb_tv_31);
+        nb_tv_32 = (TextView)findViewById(R.id.nb_tv_32);
+        nb_tv_33 = (TextView)findViewById(R.id.nb_tv_33);
+        nb_tv_34 = (TextView)findViewById(R.id.nb_tv_34);
+        nb_tv_35 = (TextView)findViewById(R.id.nb_tv_35);
+        nb_tv_41 = (TextView)findViewById(R.id.nb_tv_41);
+        nb_tv_42 = (TextView)findViewById(R.id.nb_tv_42);
+        nb_tv_43 = (TextView)findViewById(R.id.nb_tv_43);
+        nb_tv_44 = (TextView)findViewById(R.id.nb_tv_44);
+        nb_tv_45 = (TextView)findViewById(R.id.nb_tv_45);
+        nb_tv_51 = (TextView)findViewById(R.id.nb_tv_51);
+        nb_tv_52 = (TextView)findViewById(R.id.nb_tv_52);
+        nb_tv_53 = (TextView)findViewById(R.id.nb_tv_53);
+        nb_tv_54 = (TextView)findViewById(R.id.nb_tv_54);
+        nb_tv_55 = (TextView)findViewById(R.id.nb_tv_55);
+        nb_tv_61 = (TextView)findViewById(R.id.nb_tv_61);
+        nb_tv_62 = (TextView)findViewById(R.id.nb_tv_62);
+        nb_tv_63 = (TextView)findViewById(R.id.nb_tv_63);
+        nb_tv_64 = (TextView)findViewById(R.id.nb_tv_64);
+        nb_tv_65 = (TextView)findViewById(R.id.nb_tv_65);
+        nb_tv_71 = (TextView)findViewById(R.id.nb_tv_71);
+        nb_tv_72 = (TextView)findViewById(R.id.nb_tv_72);
+        nb_tv_73 = (TextView)findViewById(R.id.nb_tv_73);
+        nb_tv_74 = (TextView)findViewById(R.id.nb_tv_74);
+        nb_tv_75 = (TextView)findViewById(R.id.nb_tv_75);
+        nb_tv_81 = (TextView)findViewById(R.id.nb_tv_81);
+        nb_tv_82 = (TextView)findViewById(R.id.nb_tv_82);
+        nb_tv_83 = (TextView)findViewById(R.id.nb_tv_83);
+        nb_tv_84 = (TextView)findViewById(R.id.nb_tv_84);
+        nb_tv_85 = (TextView)findViewById(R.id.nb_tv_85);
+        nb_tv_time = (TextView)findViewById(R.id.nb_tv_time);
+
         latttt_content = (TextView)findViewById(R.id.latttt_content);
         first_content = (TextView)findViewById(R.id.first_content);
         second_content = (TextView)findViewById(R.id.second_content);
