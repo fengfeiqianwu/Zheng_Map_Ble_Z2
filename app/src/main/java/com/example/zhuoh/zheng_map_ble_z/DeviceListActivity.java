@@ -25,10 +25,13 @@ import android.widget.TextView;
 
 import java.util.Set;
 
+
+
+
 /**
  * Created by Vera on 2016/4/19.
  */
-public class DeviceListActivity extends Activity {
+public class DeviceListActivity extends Activity{
     // 调试
     private static final int REQUEST_FINE_LOCATION=0;
     private static final String TAG = "DeviceListActivity";
@@ -41,7 +44,7 @@ public class DeviceListActivity extends Activity {
     private ArrayAdapter<String> mNewDevicesArrayAdapter;
     TextView tv_paired_device,tv_new_device;
     Button btn_scan;
-    ListView ListV_paried,ListV_new;
+    ListView  ListV_paried,ListV_new;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -60,7 +63,7 @@ public class DeviceListActivity extends Activity {
 
         if (Build.VERSION.SDK_INT >= 23) {
             //判断是否有权限
-            int checkCallPhonePermission =  ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
+            int checkCallPhonePermission =  ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_COARSE_LOCATION);
             if(checkCallPhonePermission !=  PackageManager.PERMISSION_GRANTED){
                 //判断是否需要 向用户解释，为什么要申请该权限
                 if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_COARSE_LOCATION))
@@ -124,6 +127,51 @@ public class DeviceListActivity extends Activity {
         }
 
     }
+
+//
+//    BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+//
+//        mBluetoothAdapter.startLeScan(mLEScanCallback);
+//
+//
+//
+//
+//
+//        mBluetoothAdapter.stopLeScan(mLEScanCallback);
+
+
+
+
+
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+//        switch (requestCode) {
+//            case REQUEST_FINE_LOCATION:
+//                // If request is cancelled, the result arrays are empty.
+//                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+//                    // The requested permission is granted.
+//                    if (mScanning == false) {
+//                        scanLeDevice(true);
+//                    }
+//                } else {
+//                    // The user disallowed the requested permission.
+//                }
+//                break;
+//
+//        }
+//    }
+
+//    private BluetoothAdapter.LeScanCallback mLEScanCallback = new BluetoothAdapter.LeScanCallback() {
+//        @Override
+//        public void onLeScan( BluetoothDevice device,  int rssi,  byte[] scanRecord) {
+//
+//
+//
+//        }
+//
+//    };
+
+
     @Override
     protected void onDestroy()
     {
@@ -176,10 +224,8 @@ public class DeviceListActivity extends Activity {
             //结果，完成这项活动
             setResult(Activity.RESULT_OK, intent);
             finish();
-
         }
     };
-
 
     // 该broadcastreceiver监听设备和
     // 变化的标题时，发现完成
@@ -226,3 +272,4 @@ public class DeviceListActivity extends Activity {
     };
 
 }
+

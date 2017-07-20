@@ -425,10 +425,10 @@ public class BluetoothChatService {
                     /*data = data.substring(data.indexOf(":"),data.length()-2);
                     String a[]= data.split(",");*/
                     if(data.equals("AT+SCELLINFOOK")){
-                        data = "0:0,0,0,0,0,0,0,0";
+                        data = "AT+SCELLINFO+SCELLINFO:0,0,0,0,0,0,0,0OK";
                     }
                     if(data.equals("AT+BSINFOOK")){
-                        data = "0:0,0,0,0,0,0,0,0";
+                        data = "AT+BSINFO+BSINFO:0,0,0,0,0,0,0,0OK";
                     }
                     deal_handler(data);
                     data = "";

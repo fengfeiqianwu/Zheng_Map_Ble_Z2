@@ -1292,12 +1292,16 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     redrawline();
                     String strlat = Double.toString(amapLocation.getLatitude());
                     String strlon = Double.toString(amapLocation.getLongitude());
-                    mlat.setText(strlat);
-                    mlon.setText(strlon);
+                    Log.i(TAG,strlat);
+                    //mlat.setText(strlat);
+                    //mlon.setText(strlon);
                     tempdata.put("strlat",strlat);
                     tempdata.put("strlng",strlon);
                     is_loc_data = true;
+                    Log.i("-----------",Boolean.toString(tempdata.containsKey("strlac")));
+                    Log.i(TAG,"你好你好");
                     if(tempdata.containsKey("strlac")){
+                        Log.i(TAG,"ninininininininini");
                         Data data = new Data();
                         data.lat = tempdata.get("strlat").toString();
                         data.lng = tempdata.get("strlng").toString();
@@ -1310,14 +1314,18 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                         data.cellMode = tempdata.get("cellMode").toString();
                         data.channel = tempdata.get("strchannel").toString();
                         data.rxlevel = tempdata.get("strrxlevel").toString();
+                        Log.i(TAG,"n");
                         userDao = new UserDao(this);
                         List<Map<String,String>> list = new ArrayList<Map<String,String>>();
+                        Log.i(TAG+"三兄弟",data.cellMode+data.lac+data.cid);
                         list = userDao.getDatabymlc(data.cellMode,data.lac,data.cid);
+                        Log.i(TAG+"list.size",""+list.size());
                         int i,c=0;
                         for(i = 0;i<list.size();i++){
                             Map<String,String>map = new HashMap<>();
                             map = list.get(i);
                             float distance = AMapUtils.calculateLineDistance(new LatLng(Double.valueOf(data.lat),Double.valueOf(data.lng)),new LatLng(Double.valueOf(map.get("lat")),Double.valueOf(map.get("lng"))));
+                            Log.i(TAG+"distance",""+distance);
                             if(distance<=10){
                                 if(Double.valueOf(map.get("rxlevel"))<Double.valueOf(data.rxlevel)){
                                     userDao.alterDatabyidmlc(data.rxlevel,map.get("id"),data.cellMode,data.lac,data.cid);
@@ -1328,7 +1336,9 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                         }
                         if(c == list.size()){
                             userDao.insertData(data);
+                            Toast.makeText(MapActivity.this,"插入了一条数据",Toast.LENGTH_SHORT);
                         }
+                        Log.i(TAG,""+c);
                         //s.add(data);
                         tempdata.clear();
                         is_loc_data = false;
@@ -1499,7 +1509,6 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     WEB_THREE_TELTWO_NEI_COUNT = -1;
                     WEB_FOUR_TWO_COUNT = -2;
                     WEB_THREE_TELTWO_COUNT = -1;
-                    db = SQLiteDatabase.openOrCreateDatabase(this.getFilesDir()+"/my.db3",null);
                     /*while (locqueue!=null){
                         String title = locqueue.poll();
                         String content = Ble_Activity.blequeue.poll();

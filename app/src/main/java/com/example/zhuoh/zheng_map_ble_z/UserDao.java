@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,7 +39,7 @@ public class UserDao {
         SQLiteDatabase db = helper.getReadableDatabase();
         // 计算开始的记录数
         int startSize = (nowpage - 1) * pagesize;
-        Cursor c = db.rawQuery("select id,lac,cid,bid,mode from queryinfo limit ?,?",
+        Cursor c = db.rawQuery("select id,lac,cid,bid,mode from basedata limit ?,?",
                 new String[] { startSize + "", pagesize + "" });
 
         while (c.moveToNext()) {
@@ -119,7 +120,7 @@ public class UserDao {
     }
     public List<Map<String,String>> getDatabymlc(String mode,String lac,String cid){
         SQLiteDatabase db = helper.getReadableDatabase();
-        Cursor c = db.rawQuery("select id,lat,lng,rxlevel from queryinfo where cellMode=? and lac=? and cid=?",new String[]{mode,lac,cid});
+        Cursor c = db.rawQuery("select id,lat,lng,rxlevel from basedata where cellMode=? and lac=? and cid=?",new String[]{mode,lac,cid});
         List<Map<String, String>> list = new ArrayList<Map<String, String>>();
         while (c.moveToNext()){
             Map<String,String> map = new HashMap<String, String>();
@@ -133,6 +134,7 @@ public class UserDao {
     }
     public void alterDatabyidmlc(String rxlevel,String id ,String cellMode,String lac,String cid){
         SQLiteDatabase db = helper.getReadableDatabase();
-        db.execSQL("update queryinfo set rxlevel =? where id = ? and cellMode = ? and lac = ? and cid = ?",new Object[]{rxlevel,id,cellMode,lac,cid});
+        db.execSQL("update basedata set rxlevel =? where id = ? and cellMode = ? and lac = ? and cid = ?",new Object[]{rxlevel,id,cellMode,lac,cid});
+        Log.v("sqlbydmlc","update"+rxlevel+id+cellMode+lac+cid);
     }
 }

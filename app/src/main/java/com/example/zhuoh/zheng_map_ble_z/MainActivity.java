@@ -3,8 +3,12 @@ package com.example.zhuoh.zheng_map_ble_z;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import com.amap.api.maps.AMapUtils;
+import com.amap.api.maps.model.LatLng;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
@@ -24,6 +28,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     void init_ui() {
+
         btn_zheng_bl_connect = (Button) findViewById(R.id.btn_lochelper);
         btn_zheng_bl_connect.setText("定位助手");
         btn_zheng_map_content = (Button) findViewById(R.id.btn_roadtest);
