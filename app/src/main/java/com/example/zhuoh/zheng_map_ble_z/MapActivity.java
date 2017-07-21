@@ -762,7 +762,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                             }
                             break;
                         case ConstantData.MOBILE_FOUR_NEI:
-                            Thread.sleep(3000);
+                            Thread.sleep(5000);
                             break;
                         case ConstantData.MOBILE_THREE_NEI:
                             Thread.sleep(5000);
@@ -1110,7 +1110,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     deal_handler(str);
                     WEN_MOBILE_FOUR_TWO_NEI_COUNT++;
                 }else if(WEN_MOBILE_FOUR_TWO_NEI_COUNT == -1) {
-                    str = "AT+LOCKPLMN=1,\"46000\",3\r";//中国移动
+                    str = "AT+FORCELOCK=1,38400,183\r";//中国移动
                     deal_handler(str);
                     WEN_MOBILE_FOUR_TWO_NEI_COUNT++;
                 }else if(WEN_MOBILE_FOUR_TWO_NEI_COUNT % 2 == 0){

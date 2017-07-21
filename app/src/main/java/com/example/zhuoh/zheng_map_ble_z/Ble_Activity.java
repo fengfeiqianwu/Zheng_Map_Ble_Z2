@@ -163,7 +163,7 @@ public class Ble_Activity extends Activity implements View.OnClickListener{
                                 MapActivity.mnc_content.setText(a[2]);
                                 MapActivity.lac_content.setText(a[3]);
                                 MapActivity.ci_content.setText(a[4]);*/
-                                if(true){
+                                if(MapActivity.is_loc_data){
                                     a[0] = a[0].trim();
                                     Boolean mgsm = a[0].equals("0")&&a[2].equals("00");//移动2g
                                     Boolean ugsm = a[0].equals("0")&&a[2].equals("01");//联通2g
