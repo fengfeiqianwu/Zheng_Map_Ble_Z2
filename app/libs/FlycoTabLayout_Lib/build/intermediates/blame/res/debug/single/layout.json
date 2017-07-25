@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "D:\\Android\\AndroidStudioProjects\\Android_841\\Zheng_Map_Ble_Z\\app\\libs\\FlycoTabLayout_Lib\\build\\intermediates\\res\\merged\\debug\\layout\\layout_tab_bottom.xml",
+        "source": "D:\\Android\\AndroidStudioProjects\\Android_841\\Zheng_Map_Ble_Z\\app\\libs\\FlycoTabLayout_Lib\\src\\main\\res\\layout\\layout_tab_bottom.xml"
+    },
+    {
+        "merged": "D:\\Android\\AndroidStudioProjects\\Android_841\\Zheng_Map_Ble_Z\\app\\libs\\FlycoTabLayout_Lib\\build\\intermediates\\res\\merged\\debug\\layout\\layout_tab.xml",
+        "source": "D:\\Android\\AndroidStudioProjects\\Android_841\\Zheng_Map_Ble_Z\\app\\libs\\FlycoTabLayout_Lib\\src\\main\\res\\layout\\layout_tab.xml"
+    },
+    {
+        "merged": "D:\\Android\\AndroidStudioProjects\\Android_841\\Zheng_Map_Ble_Z\\app\\libs\\FlycoTabLayout_Lib\\build\\intermediates\\res\\merged\\debug\\layout\\layout_tab_top.xml",
+        "source": "D:\\Android\\AndroidStudioProjects\\Android_841\\Zheng_Map_Ble_Z\\app\\libs\\FlycoTabLayout_Lib\\src\\main\\res\\layout\\layout_tab_top.xml"
+    },
+    {
+        "merged": "D:\\Android\\AndroidStudioProjects\\Android_841\\Zheng_Map_Ble_Z\\app\\libs\\FlycoTabLayout_Lib\\build\\intermediates\\res\\merged\\debug\\layout\\layout_tab_segment.xml",
+        "source": "D:\\Android\\AndroidStudioProjects\\Android_841\\Zheng_Map_Ble_Z\\app\\libs\\FlycoTabLayout_Lib\\src\\main\\res\\layout\\layout_tab_segment.xml"
+    },
+    {
+        "merged": "D:\\Android\\AndroidStudioProjects\\Android_841\\Zheng_Map_Ble_Z\\app\\libs\\FlycoTabLayout_Lib\\build\\intermediates\\res\\merged\\debug\\layout\\layout_tab_left.xml",
+        "source": "D:\\Android\\AndroidStudioProjects\\Android_841\\Zheng_Map_Ble_Z\\app\\libs\\FlycoTabLayout_Lib\\src\\main\\res\\layout\\layout_tab_left.xml"
+    },
+    {
+        "merged": "D:\\Android\\AndroidStudioProjects\\Android_841\\Zheng_Map_Ble_Z\\app\\libs\\FlycoTabLayout_Lib\\build\\intermediates\\res\\merged\\debug\\layout\\layout_tab_right.xml",
+        "source": "D:\\Android\\AndroidStudioProjects\\Android_841\\Zheng_Map_Ble_Z\\app\\libs\\FlycoTabLayout_Lib\\src\\main\\res\\layout\\layout_tab_right.xml"
+    }
+]
