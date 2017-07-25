@@ -12,6 +12,10 @@ import android.os.Bundle;
 
 public class FullDataActivity extends AppCompatActivity {
 
+    private static FullDataActivity instance;
+    public static FullDataActivity getInstance() {
+        return instance;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
