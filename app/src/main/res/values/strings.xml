@@ -112,6 +112,9 @@
     <string name="baseloc">基站定位</string>
     <string name="sysset">系统设置</string>
     <string name="devicecon">设备连接</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
 
 

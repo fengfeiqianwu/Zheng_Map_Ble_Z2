@@ -19,6 +19,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
@@ -51,11 +52,13 @@
 
         <activity android:name=".DataActivity" />
         <activity android:name=".LocalHelperActivity" />
-        <activity android:name=".FullDataActivity"
+        <activity
+            android:name=".FullDataActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name="fragment.act.NewMainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

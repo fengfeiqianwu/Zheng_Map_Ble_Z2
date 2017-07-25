@@ -1,16 +1,19 @@
-package com.example.zhuoh.zheng_map_ble_z;
+package fragment.act;
 
-
-import android.content.Context;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.design.widget.TabLayout;
-import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 
+import com.example.zhuoh.zheng_map_ble_z.FullDataActivity;
+import com.example.zhuoh.zheng_map_ble_z.PageFragment;
+import com.example.zhuoh.zheng_map_ble_z.R;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
@@ -21,44 +24,88 @@ import UI.SimpleCardFragment;
 import entity.TabEntity;
 import utils.ViewFindUtils;
 
-public class FullDataActivity extends AppCompatActivity {
 
+public class NewPageFragment extends Fragment {
+    //case1
     private ArrayList<Fragment> mFragments = new ArrayList<>();
     private String[] mTitles = {"全网", "移2", "移3", "移4", "联2","联3","联4","电2","电4","WIFI"};
-    private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
-    private View mDecorView;
     private ViewPager mViewPager;
     private CommonTabLayout mTabLayout_8;
 
+    public static final String ARGS_PAGE = "args_page";
+    private int mPage;
+    public NewPageFragment() {
+        // Required empty public constructor
+    }
+
+
+    public static NewPageFragment newInstance(int page) {
+        Bundle args = new Bundle();
+
+        args.putInt(ARGS_PAGE, page);
+        NewPageFragment fragment = new NewPageFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_full_data);
+        mPage = getArguments().getInt(ARGS_PAGE);
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        switch (mPage){
+            case 1:
+                View view = inflater.inflate(R.layout.activity_full_data,container,false);
+                initviewpage(view);
+                return view;
+            case 2:
+                View view2 = inflater.inflate(R.layout.fragment_page2,container,false);
+                return view2;
+            case 3:
+                View view3 = inflater.inflate(R.layout.fragment_page2,container,false);
+                return view3;
+            case 4:
+                View view4 = inflater.inflate(R.layout.fragment_page2,container,false);
+                return view4;
+            case 5:
+                View view5 = inflater.inflate(R.layout.fragment_page2,container,false);
+                return view5;
+        }
+        /*View view = inflater.inflate(R.layout.fragment_page,container,false);
+        TextView textView = (TextView) view.findViewById(R.id.textView);
+        textView.setText("第"+mPage+"页");
+        return view;*/
+        View view = inflater.inflate(R.layout.fragment_page2,container,false);
+        return view;
+    }
+    void initviewpage(View view){
         for (String title : mTitles) {
             mFragments.add(SimpleCardFragment.getInstance("Switch ViewPager " + title));
 
         }
 
-        mDecorView = getWindow().getDecorView();
-        mViewPager = ViewFindUtils.find(mDecorView, R.id.vp_2);
-        mViewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
+        //mDecorView = .getDecorView();
+        mViewPager = ViewFindUtils.find(view, R.id.vp_2);
+        mViewPager.setOnTouchListener(new View.OnTouchListener() {
 
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                // TODO Auto-generated method stub
+                return true;
+            }
+        });
+        mViewPager.setAdapter(new MyPagerAdapter(getChildFragmentManager()));
+        ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
         for (int i = 0; i < mTitles.length; i++) {
             mTabEntities.add(new TabEntity(mTitles[i], 0, 0));
         }
         /** indicator圆角色块 */
-        mTabLayout_8 = ViewFindUtils.find(mDecorView, R.id.tl_8);
+        mTabLayout_8 = ViewFindUtils.find(view, R.id.tl_8);
         mTabLayout_8.setTabData(mTabEntities);
         tl_2();
-        //Fragment+ViewPager+FragmentViewPager组合的使用
-        /*ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
-        MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager(),
-                this);
-        viewPager.setAdapter(adapter);
-
-        //TabLayout
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
-        tabLayout.setupWithViewPager(viewPager);*/
     }
     private class MyPagerAdapter extends FragmentPagerAdapter {
         public MyPagerAdapter(FragmentManager fm) {

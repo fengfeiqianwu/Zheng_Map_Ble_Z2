@@ -26,7 +26,7 @@
                 android:gravity="center"
                 android:text="移动2G"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -38,7 +38,7 @@
                 android:gravity="center"
                 android:text="LAC"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -50,7 +50,7 @@
                 android:gravity="center"
                 android:text="CID"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -62,7 +62,7 @@
                 android:gravity="center"
                 android:text="SID"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -73,7 +73,7 @@
                 android:gravity="center"
                 android:text="时间"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
         </TableRow>
         <TableRow
@@ -157,7 +157,7 @@
                 android:gravity="center"
                 android:text="移动3G"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -169,7 +169,7 @@
                 android:gravity="center"
                 android:text="LAC"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -181,7 +181,7 @@
                 android:gravity="center"
                 android:text="CID"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -193,7 +193,7 @@
                 android:gravity="center"
                 android:text="SID"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -204,7 +204,7 @@
                 android:gravity="center"
                 android:text="时间"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
         </TableRow>
         <TableRow
@@ -288,7 +288,7 @@
                 android:gravity="center"
                 android:text="移动4G"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -300,7 +300,7 @@
                 android:gravity="center"
                 android:text="LAC"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -312,7 +312,7 @@
                 android:gravity="center"
                 android:text="CID"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -324,7 +324,7 @@
                 android:gravity="center"
                 android:text="SID"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -335,7 +335,7 @@
                 android:gravity="center"
                 android:text="时间"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
         </TableRow>
         <TableRow
@@ -419,7 +419,7 @@
                 android:gravity="center"
                 android:text="联通2G"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -431,7 +431,7 @@
                 android:gravity="center"
                 android:text="LAC"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -443,7 +443,7 @@
                 android:gravity="center"
                 android:text="CID"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -455,7 +455,7 @@
                 android:gravity="center"
                 android:text="SID"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -466,7 +466,7 @@
                 android:gravity="center"
                 android:text="时间"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
         </TableRow>
         <TableRow
@@ -550,7 +550,7 @@
                 android:gravity="center"
                 android:text="联通3G"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -562,7 +562,7 @@
                 android:gravity="center"
                 android:text="LAC"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -574,7 +574,7 @@
                 android:gravity="center"
                 android:text="CID"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -586,7 +586,7 @@
                 android:gravity="center"
                 android:text="SID"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -597,7 +597,7 @@
                 android:gravity="center"
                 android:text="时间"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
         </TableRow>
         <TableRow
@@ -681,7 +681,7 @@
                 android:gravity="center"
                 android:text="联通4G"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -693,7 +693,7 @@
                 android:gravity="center"
                 android:text="LAC"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -705,7 +705,7 @@
                 android:gravity="center"
                 android:text="CID"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -717,7 +717,7 @@
                 android:gravity="center"
                 android:text="SID"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -728,7 +728,7 @@
                 android:gravity="center"
                 android:text="时间"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
         </TableRow>
         <TableRow
@@ -812,7 +812,7 @@
                 android:gravity="center"
                 android:text="电信2G"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -824,7 +824,7 @@
                 android:gravity="center"
                 android:text="LAC"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -836,7 +836,7 @@
                 android:gravity="center"
                 android:text="CID"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -848,7 +848,7 @@
                 android:gravity="center"
                 android:text="SID"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -859,7 +859,7 @@
                 android:gravity="center"
                 android:text="时间"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
         </TableRow>
         <TableRow
@@ -943,7 +943,7 @@
                 android:gravity="center"
                 android:text="电信4G"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -955,7 +955,7 @@
                 android:gravity="center"
                 android:text="LAC"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -967,7 +967,7 @@
                 android:gravity="center"
                 android:text="CID"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -979,7 +979,7 @@
                 android:gravity="center"
                 android:text="SID"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -990,7 +990,7 @@
                 android:gravity="center"
                 android:text="时间"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
         </TableRow>
         <TableRow
@@ -1008,7 +1008,7 @@
                 android:gravity="center"
                 android:text="-"
                 android:textColor="#808080"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
