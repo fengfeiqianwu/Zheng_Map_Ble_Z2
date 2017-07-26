@@ -1220,11 +1220,11 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                     deal_handler(str);
                     WEN_MOBILE_FOUR_TWO_NEI_COUNT++;
                 }else if(WEN_MOBILE_FOUR_TWO_NEI_COUNT % 2 == 0){
-                    str = "AT+SCELLINFO\r";
+                    str = "AT+FORCELOCK=6,4,13,14,15,16\r";
                     deal_handler(str);
                     WEN_MOBILE_FOUR_TWO_NEI_COUNT++;
                 }else if(WEN_MOBILE_FOUR_TWO_NEI_COUNT % 2 == 1){
-                    str = "AT+NCELLINFO\r";
+                    str = "AT+SCELLINFO\r";
                     deal_handler(str);
                     WEN_MOBILE_FOUR_TWO_NEI_COUNT++;
                 }

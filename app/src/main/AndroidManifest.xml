@@ -33,7 +33,11 @@
             android:value="7b6b83022635fe1aa4a0ad77ad117fa5" />
 
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".DeviceListActivity"
@@ -54,13 +58,14 @@
         <activity android:name=".LocalHelperActivity" />
         <activity
             android:name=".FullDataActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name="fragment.act.NewMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="fragment.act.NewMainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
+        </activity>
+        <activity android:name="fragment.act.WelcomeActivity">
+
         </activity>
     </application>
 

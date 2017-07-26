@@ -24,7 +24,7 @@ import utils.ViewFindUtils;
 public class NewMainActivity extends AppCompatActivity {
 
     private ArrayList<Fragment> mFragments = new ArrayList<>();
-    private String[] mTitles = {"全网", "移2", "移3", "移4", "联2","联3"};
+    private String[] mTitles = {"全网", "移2", "移3", "移4", "连接","联3"};
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
     private View mDecorView;
     private ViewPager mViewPager;
